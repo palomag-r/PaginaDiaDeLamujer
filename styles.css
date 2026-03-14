@@ -1,0 +1,311 @@
+/* ==========================================================================
+   1. RESET Y CONFIGURACIÓN GLOBAL
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+seccion {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+/* ==========================================================================
+   2. SECCIÓN: INICIAL (PORTADA)
+   ========================================================================== */
+#inicial {
+  background-color: #4a148c;
+  font-family: 'Heading', sans-serif;
+  color: #ffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  display: grid; 
+  grid-template-columns: repeat(17, 1fr); 
+  grid-template-rows: repeat(6, 1fr); 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . . . . . . . . . . . . . . . ."
+    ". contenido-portada contenido-portada contenido-portada contenido-portada contenido-portada contenido-portada . contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 ."
+    ". contenido-portada contenido-portada contenido-portada contenido-portada contenido-portada contenido-portada . contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 ."
+    ". parrafo1 parrafo1 parrafo1 parrafo1 parrafo1 parrafo1 . contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 ."
+    ". parrafo1 parrafo1 parrafo1 parrafo1 parrafo1 parrafo1 . contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 contenedor-i1 ."
+    ". . . . . . . . . . . . . . . . ."; 
+}
+
+/* Elementos de Portada */
+#inicial h1 { font-size: 35pt;text-align: left; color: #ffffff;  }
+.parrafo1 { font-size: 25pt; text-align: center; }
+
+.contenido-portada { grid-area: contenido-portada; }
+.parrafo1 { grid-area: parrafo1; }
+.contenedor-i1 { grid-area: contenedor-i1; }
+.contenedor-i1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   3. SECCIONES DE HISTORIA (BLOQUES REUTILIZABLES)
+   ========================================================================== */
+
+/* --- Historia 1: Incendio --- */
+#timeline {
+  background-color: #e9d8f5;
+  font-family: 'Heading', sans-serif;
+  display: grid; 
+  align-items: center;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: 1fr 1fr 0.8fr 0.5fr 0.8fr 1fr 1fr; 
+  gap: 15px;
+  height: 100%;
+}
+
+#timeline h1 { color: #8e44ad; font-size: 48pt; font-weight: 600; text-align: center; }
+.year { color: #8e44ad; font-size: 30pt; font-weight: 400; text-align: center; }
+.informacion  { color: #333; font-size: 20pt; text-align: justify; }
+
+.year        { grid-row: 3 / 4; grid-column: 1 / 2; }
+.titulo-timeline  { grid-row: 1 / 2; grid-column: 4 / 6; }
+.informacion { grid-row: 2 / 6; grid-column: 2 / 4; }
+.incendio    { grid-row: 2 / 5; grid-column: 5 / 8; }
+.incendio img { width: 100%; height: auto; display: block; }
+
+/* --- Historia 2: ONU --- */
+#historia2 {
+  background-color: #e9d8f5;
+  font-family: 'Heading', sans-serif;
+  display: grid; 
+  align-items: center;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: 1fr 1fr 0.8fr 0.5fr 0.8fr 1fr 1fr; 
+  gap: 15px;
+  height: 100%;
+}
+
+h1 { color: #8e44ad; font-size: 38pt; font-weight: 600; text-align: center; }
+.year2 { color: #8e44ad; font-size: 30pt; font-weight: 400; text-align: center; }
+.informacion2  { color: #333; font-size: 20pt; text-align: justify; }
+
+.onu          { grid-row: 2 / 6; grid-column: 1 / 4; }
+.onu img      { width: 100%; height: auto; display: block; }
+.informacion2 { grid-row: 2 / 6; grid-column: 4 / 7; }
+.year2        { grid-row: 3 / 4; grid-column: 7 / 7; }
+
+/* --- Historia 3: Ley --- */
+#historia3 {
+  background-color: #e9d8f5;
+  font-family: 'Heading', sans-serif;
+  display: grid; 
+  align-items: center;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: 1fr 1fr 0.8fr 0.5fr 0.8fr 1fr 1fr; 
+  gap: 15px;
+  height: 100%;
+}
+
+.year3 { color: #8e44ad; font-size: 30pt; font-weight: 400; text-align: center; }
+.informacion3  { color: #333; font-size: 20pt; text-align: justify; }
+
+.year3        { grid-row: 3 / 4; grid-column: 1 / 2; }
+.informacion3 { grid-row: 2 / 6; grid-column: 2 / 4; }
+.ley          { grid-row: 2 / 5; grid-column: 5 / 8; }
+.ley img      { width: 100%; height: auto; display: block; }
+
+/* --- Historia 4: Olimpia --- */
+#olimpia {
+  background-color: #e9d8f5;
+  font-family: 'Heading', sans-serif;
+  display: grid; 
+  align-items: center;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: 1fr 1fr 0.8fr 0.5fr 0.8fr 1fr 1fr; 
+  gap: 15px;
+  height: 100%;
+}
+
+.year4{ color: #8e44ad; font-size: 30pt; font-weight: 400; text-align: center; }
+.informacion4  { color: #333; font-size: 20pt; text-align: justify; }
+
+.olimpialey     { grid-row: 2 / 6; grid-column: 1 / 4; }
+.olimpialey img { width: 100%; height: auto; display: block; }
+.informacion4   { grid-row: 2 / 6; grid-column: 4 / 7; }
+.year4          { grid-row: 3 / 4; grid-column: 7 / 7; }
+
+
+/* --- Sección ciudades --- */
+#marchas{
+  background-color: #f8bbd0;
+  font-family: 'Heading', sans-serif;
+  display: grid; 
+  align-items: center;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  height: 100%;
+}
+#marchas h1{ color: #d81b60; font-size: 38pt; font-weight: 600; text-align: center;}
+#marchas h2{ color: #ffff; font-size: 30pt; font-weight: 300; text-align: center;}
+#marchas h3 {color: #333; font-size: 25pt; font-weight: 150; text-align: center;}
+#marchas p{color: #333; font-size: 20pt; font-weight: 400; text-align: center;}
+#marchas h4{color: #8e44ad; font-size: 30pt; text-align: center; }
+footer{color: #333; font-size: 10pt; text-align: left;}
+.estados{
+  appearance: none; /* Elimina la flecha original del navegador */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  font-size: 20pt;
+  color: #333;
+  background-color: #f8bbd0;
+  border: 3px solid #d81b60;
+  border-radius: 5px;
+  padding: 5px 20px 8px 7.5px;
+  cursor: pointer;
+}
+.selector-estado{
+  position: relative;
+  display: inline-block;
+}
+.selector-estado::after{
+  content: '▼';
+  font-size: 20pt;
+  color: #333;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.municipios{
+  appearance: none; /* Elimina la flecha original del navegador */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  font-size: 20pt;
+  color: #333;
+  background-color: #f8bbd0;
+  border: 3px solid #d81b60;
+  border-radius: 5px;
+  padding: 5px 20px 8px 7.5px;
+  cursor: pointer;
+}
+.selector-municipio{
+  position: relative;
+  display: inline-block;
+}
+.selector-municipio::after{
+  content: '▼';
+  font-size: 20pt;
+  color: #333;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.tituloC {grid-row: 1 / 2; grid-column: 2 / 6;}
+.localizacion{grid-row: 2/3; grid-column: 1/3;}
+.selector-estado{grid-row: 3 / 4; grid-column: 1 / 3;}
+.selector-municipio{grid-row: 4 / 5; grid-column: 1/ 3;}
+.resultado{grid-row: 3 / 4; grid-column: 3 / 5;}
+footer {grid-row: 4 / 5; grid-column: 6 / 7;}
+
+#merida{
+background-color:#e8f5e9;
+font-family: 'Heading', sans-serif;
+align-items: center; 
+}
+
+.titulo h1{color:#7b2cbf; font-size: 38pt; font-weight: 600; text-align: center;}
+.titulo h2{color:#9a7da1; font-size: 32pt; font-weight: 500; text-align: center;}
+
+#uno h1{color:#d81b60; font-size: 28pt; font-weight: 600; text-align: center;margin-bottom: 20px;}
+#uno h2{color:#e75b8e; font-size: 25pt; font-weight: 500; text-align: center;margin-bottom: 15px;}
+#uno p{color:#333; font-size: 15pt; font-weight: 300; text-align: justify;}
+
+#dos h1{color:#d81b60; font-size: 28pt; font-weight: 600; text-align: center;}
+#dos h2{color:#e75b8e; font-size: 25pt; font-weight: 500; text-align: center;}
+#dos p{color:#333; font-size: 15pt; font-weight: 300; text-align: justify;}
+
+#tres h1{color:#d81b60; font-size: 28pt; font-weight: 600; text-align: center;}
+#tres h2{color:#e75b8e; font-size: 25pt; font-weight: 500; text-align: center;}
+#tres p{color:#333; font-size: 15pt; font-weight: 300; text-align: justify;}
+
+#cuatro h1{color:#d81b60; font-size: 28pt; font-weight: 600; text-align: center;}
+#cuatro h2{color:#e75b8e; font-size: 25pt; font-weight: 500; text-align: center;}
+#cuatro p{color:#333; font-size: 15pt; font-weight: 300; text-align: justify;}
+
+#cinco h1{color:#d81b60; font-size: 28pt; font-weight: 600; text-align: center;}
+#cinco h2{color:#e75b8e; font-size: 25pt; font-weight: 500; text-align: center;}
+#cinco p{color:#333; font-size: 15pt; font-weight: 300; text-align: justify;}
+
+#seis h1{color:#d81b60; font-size: 28pt; font-weight: 600; text-align: center;}
+#seis h2{color:#e75b8e; font-size: 25pt; font-weight: 500; text-align: center;}
+#seis p{color:#333; font-size: 15pt; text-align: justify;}
+
+#uno {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  /* Espacio entre las imágenes */
+  gap: 30px; 
+  padding: 20px;
+  align-items: center;
+}
+#tres{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  /* Espacio entre las imágenes */
+  gap: 30px; 
+  padding: 20px;
+  align-items: center;
+}
+#cuatro{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  /* Espacio entre las imágenes */
+  gap: 30px; 
+  padding: 20px;
+  align-items: center;
+}
+#cinco{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  /* Espacio entre las imágenes */
+  gap: 30px; 
+  padding: 20px;
+  align-items: center;
+}
+#seis{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  /* Espacio entre las imágenes */
+  gap: 30px; 
+  padding: 20px;
+  align-items: center;
+}
+.columna-texto{
+  text-align: left;
+}
+.columna-imagen img{
+  width: 60%; /* La imagen ocupa todo el ancho de su columna */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 8px;
+}
+.columna-texto{
+  text-align: left;
+}
+#dos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  /* Espacio entre las imágenes */
+  gap: 30px; 
+  padding: 20px;
+  align-items: center;
+}
+.columna-imagen-izq{text-align: left;}

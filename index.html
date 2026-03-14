@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"> <!-- Permite mostrar acentos n, simbolos -->
+<meta name="author" content="Paloma Gomez">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- permite que la página se adapte a los diferentes tamaños de pantalla-->
+<title>8M</title> 
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div class="container">
+        
+<!-- Seccion Portada -->
+<section id="inicial" class="seccion">
+    <div class="contenido-portada">
+        <h1>
+            Día Internacional de la Mujer
+        </h1>
+    </div>
+    <div class="parrafo1">
+        <p>
+            ¿Por qué el 8M es un día de
+            conmemoración y no de
+            celebración? Aquí te contamos más de esta lucha.
+        </p>
+        </div>
+    
+    <div class="contenedor-i1">
+        <img src="portada.png", alt"portada", width="700px">  
+    </div> 
+    
+</div>
+</section>
+<!-- Sección historia -->
+<section id="timeline" class="seccion">
+    <div class="titulo-timeline">
+        <h1>Timeline</h1>
+    </div>
+    <div class="year">
+        <h2> 1906</h2>
+    </div>
+    <p class="informacion">
+        Esta conmemoración tiene como origen 
+        Nueva York, donde las trabajadoras de una 
+        fábrica textil protestaban por condiciones
+        laborales dignas. En un intento por reprimir 
+        la protesta, los dueños cerraron las salidas del
+        edificio, dejando a las empleadas atrapadas.
+        Esta irresponsable acción termino en un
+        devastador incendio, donde más de 120
+        mujeres perdieron la vida. Este suceso
+        marco un parteaguas en la lucha por los
+        derechos laborales y la seguridad industrial
+        en el mundo.
+        </p>
+    
+    <div class="incendio">
+        <img src="incenidio.png", alt="incendio" width="500px">
+    </div>
+</section>
+<!--segunda seccion 1997-->
+<section id="historia2"  class="seccion">
+    <div class="onu">
+        <img src="onu.png"  width="500px">
+    </div>
+    <p class="informacion2">
+        Aunque el 8 de marzo ya se conmemoraba
+        en diversos países desde principios
+        del siglo XX, no fue hasta 1975 cuando
+        la ONU lo institucionalizó oficialmente.
+        Posteriormente, en 1977, la Asamblea General 
+        invitó a todos los Estados a proclamar una 
+        jornada al año como el Día de las Naciones
+        Unidas para los Derechos de la Mujer.
+    </p>
+    <div class="year2">
+        <h2>
+            1977
+        </h2>
+    </div>
+</section>
+<section id="historia3" class="seccion">
+    <div class="year3">
+        <h2> 2007</h2>
+    </div>
+    <p class="informacion3">
+        Ley General de Acceso de las Mujeres a una Vida Libre de Violencia,
+        se proclama como el marco legal principal en México que define
+        los tipos de violencia (psicológica, física, patrimonial, 
+        económica y sexual) y establece mecanismos de protección.
+        </p>
+    
+    <div class="ley">
+        <img src="ley.png", alt="incendio" width="500px">
+    </div>
+</section>
+<!--segunda seccion olimpia-->
+<section id="olimpia" class="seccion">
+    <div class="olimpialey">
+        <img src="Olimpia.png"  width="500px">
+    </div>
+    <p class="informacion4">
+        La Ley Olimpia: Un avance reciente y crucial 
+        que sanciona la violencia digital. 
+        Surgió de la lucha de Olimpia Coral Melo
+        y hoy es un referente internacional de
+        justicia para las mujeres.
+    </p>
+    <div class="year4">
+        <h2>
+            2021
+        </h2>
+    </div>
+</section>
+
+<!--Sección concentración-->
+<section id="marchas" class="seccion">
+    <div class="tituloC">
+        <h1>
+            Convocatorias Nacionales 2026 (Marchas en México)
+        </h1>
+    </div>
+    <div class="localizacion">
+        <h2>
+            Encuentra aquí la más cercana a ti
+        </h2>
+    </div>
+    
+    <div class="selector-estado">
+        <h3>Estado</h3>
+        <select id="estado" class="estados" onchange="cargarMunicipios()">
+            <option value="">Selecciona el Estado</option>
+            <option value="BCN">Baja California</option>
+            <option value="BCS">Baja California Sur</option>
+            <option value="CHS">Chiapas</option>
+            <option value="CHH">Chihuahua</option>
+            <option value="CDMX">Ciudad de México</option>
+            <option value="COA">Coahuila</option>
+            <option value="COL">Colima</option>
+            <option value="DUR">Durango</option>
+            <option value="MEX">Estado de México</option>
+            <option value="GTO">Guanajuato</option>
+            <option value="GRO">Guerrero</option>
+            <option value="HGO">Hidalgo</option>
+            <option value="JAL">Jalisco</option>
+            <option value="MIC">Michoacán</option>
+            <option value="MOR">Morelos</option>
+            <option value="NLE">Nuevo León</option>
+            <option value="OAX">Oaxaca</option>
+            <option value="PUE">Puebla</option>
+            <option value="QRO">Querétaro</option>
+            <option value="ROO">Quintana Roo</option>
+            <option value="SLP">San Luis Potosí</option>
+            <option value="SIN">Sinaloa</option>
+            <option value="SON">Sonora</option>
+            <option value="TAB">Tabasco</option>
+            <option value="YUC">Yucatán</option>
+            <option value="ZAC">Zacatecas</option>
+        </select>
+    </div>
+    <div class="selector-municipio">
+        <h3>
+            Municipio
+        </h3>
+        <select id="municipio" class="municipios" onchange="mostrarInformacion()">
+            <option value="">Seleccione el Municipio</option>
+        </select>
+    </div>
+    <div class="resultado" id="resultado">
+        <h3>
+            Selecciona las opciones para ver los detalles
+        </h3>
+    </div>
+    <script src="script.js"></script>
+    <footer>
+        Para más información visita el instagram de We R Women on Fire @werwomenonfire
+    </footer>
+</section>
+<section id="merida" class="seccion">
+    <div class="titulo">
+        <h1>
+            8M en Mérida
+        </h1>
+        <h2>
+            ¿Qué observo Kanan | Derechos Humanos?
+        </h2>
+    </div>
+    <div id="uno" class="info-grid">
+        <div class="columna-texto">
+        <h1>1</h1>
+        <h2>PRESENCIA DE POLICÍAS</h2>
+        <P>
+            Se registró presencia de: 1) Policía preventiva y antimotines
+            de la SSP; 2) Policía Estatal de Investigación (PEI) de la SSP; y 3)
+            Policía Municipal del Ayuntamiento de Mérida.
+        </P>
+        <p>
+            En términos generales, la presencia policial directa en el trayecto de 
+            la movilización fue reducida. En el punto final del recorrido se registró
+            la presencia de elementos de la PEI, tanto en los alrededores del monumento
+            como entre las personas manifestantes. En la zona también se identificó la 
+            presencia de policías estatales ubicados a cierta distancia del contingente,
+            todos haciendo uso de radios.
+        </p>
+        </div>
+        <div class="columna-imagen">
+            <img src="uno.png" >
+        </div>
+    </div>
+    <div id="dos" class="info-grid">
+        <div class="columa-imagen-izq">
+            <img src="dos.png">
+        </div>
+        <div class="columna-texto-izq">
+            <h1>2</h1>
+        <h2>POLICÍAS VESTIDOS DE CIVILES</h2>
+        <p>
+            Se notó la presencia de personas con características similares a los policias (hombres con
+            cabello rapado a los costados y corto en la parte superior; usualmente vestidos con
+            playera simple, pantalón de mezclilla azul y gorra) que acudieron a la protesta como
+            "civiles". <br>
+        </p>
+        <p>
+            Es decir, no acuidieron con uniformes oficiales, logotipos, sin armas visibles, 
+            pero que igualmente merodeaban la zona de la protesta del 8M. Su operatividad
+            igualmente se confirma puesto que se observó que cerca de la conclusión de la 
+            marcha, se agruparon y se colocaron chalecos reflejantes color amarillo, similares 
+            a los de los polícas preventivos o de tránsito.
+        </p>
+        </div>
+
+    </div>
+    <div id="tres" class="info-grid">
+        <div class="columna-texto">
+            <h1>3</h1>
+        <h2>VALLAS EN MOMUMENTOS</h2>
+        <p>
+            Entre la noche del 7 de marzo y la madrugada del día 8 de 
+            marzo de 2026, se registró que elementos de la Secretaría de 
+            Seguridad Pública, acompañados de personal técnico del Gobierno del 
+            Estado de Yucatán, se encontraban instalando "vallas" alrededor de 
+            Monumentos y edificios públicos en la ciudad de Mérida.
+        </p>
+        </div>
+        <div class="columna-imagen">
+            <img src="tres.png" alt="vayas">
+        </div>
+    
+    </div>
+    <div id="cuatro" class="info-grid">
+        <div class="columa-imagen-izq">
+            <img src="cuatro.png">
+        </div>
+        <div class="columna-texto-izq">
+        <h1>4</h1>
+        <h2>USO DE DRONES</h2>
+        <p>
+            Se observó la presencia de al menos 5 drones, dos de ellos
+            pertenecientes al cuerpo policial, situados especificamente sobre
+            el Monumento a la Patria. <br>
+        </p>
+        <p>
+            Un dron de gran tamaño, perteneciente a la PEI, se mantuvo fijo sobre
+            la zona del monumento, realizando únicamente pequeños desplazamientos
+            sobre el mismo perímetro. El segundo dron, de menor tamaño, permaneció
+            sobre el mismo momunmento captando tomas más cercanas, pero enfocándose en
+            las manifestantes realizando actos de iconoclasia.
+        </p>
+        </div>
+    </div>
+
+    <div id="cinco" class="info-grid">
+        <div class="columna-texto">
+            <h1>5</h1>
+        <h2>OREJAS EN LA MARCHA</h2>
+        <p>
+            Se observó la presencia de los "orejas" en la marcha del 8M.
+            Son personas que acuden a diversos espacios de protesta vestidos
+            de "civiles" que cuentan con equipo de radiocomunicación que suele
+            merodear en las marchas para dar aviso sobre cualquier suceso. 
+            igualmente suelen tomar audio, video y fotografías para documentar
+            lo sucedido con diversos fines, incluídos la criminalización.
+            <br>
+        </p>
+        <p>
+            En particular, en la marcha del 8M se detectaron a 3 perosnas con 
+            estas características.
+        </p>
+        </div>
+        <div class="columna-imagen">
+            <img src="cinco.png">
+        </div>
+    </div>
+    <div id="seis" class="info-grid">
+        <div class="columa-imagen-izq">
+            <img src="siete.png">
+        </div>
+        <div class="columna-texto-izq">
+            <h1>6</h1>
+        <h2>CONCLUSIONES DE LA MARCHA</h2>
+        <p>
+            La Comisión llegó a la conclusión que existió de manera
+            previa a la manifestación y durante esta, diversos actos de
+            autoridad que constituyen una vulneación al derecho a la 
+            protesta y liberta de expresión de las mujeres (cis y trans)
+            asistentes a la marcha por el 8M, tales como: <br>
+            1. <strong>Censura previa</strong>: La colocación de vallas de 
+            forma previa a que una protesta se efectúe, es una forma de Censura
+            previa, toda vez que la iconoclasia es una forma de protesta que está
+            protegida, lo que implica que su restricción nunca debe ser previa. <br>
+            2. <strong>Criminalización</strong>: El uso de drones y orehas como
+            mecanismos que no constituyenun cuidado de la seguridad pública durante 
+            la manifestación, sino actos intimidatorios que pueden conducir a procesos
+            penales futuros.
+            <br>
+            3. <strong>Seguridad en la protesta</strong>: Frente al amedrentamiento
+            de algunos hombres durante la protesta, manifestantes requirieron a agentes
+            de la policía su intervención para garantizar la seguridad de las mujeres,
+            sin que los elementos policiacos atendieran a dichas peticiones.
+        </p>
+
+        </div>
+
+    </div>
+
+</section>
+</div>
+<footer>
+</footer>
+</body>
+</html>
